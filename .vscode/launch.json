@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug InkyPi (dev mode)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/inkypi.py",
+      "args": ["--dev"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
