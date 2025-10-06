@@ -1,6 +1,109 @@
 {
     "name": "InkyPi Development",
     "display_type": "mock",
-    "resolution": [800, 480],
-    "orientation": "horizontal"
+    "resolution": [
+        800,
+        480
+    ],
+    "orientation": "horizontal",
+    "playlist_config": {
+        "playlists": [
+            {
+                "name": "Default",
+                "start_time": "00:00",
+                "end_time": "24:00",
+                "plugins": [
+                    {
+                        "plugin_id": "weather",
+                        "name": "Weather",
+                        "plugin_settings": {
+                            "latitude": "43.56285455113491",
+                            "longitude": "1.42822265625",
+                            "weatherProvider": "OpenWeatherMap",
+                            "units": "metric",
+                            "titleSelection": "location",
+                            "customTitle": "",
+                            "displayRefreshTime": "true",
+                            "displayMetrics": "true",
+                            "displayGraph": "true",
+                            "displayForecast": "true",
+                            "forecastDays": "7",
+                            "weatherTimeZone": "locationTimeZone",
+                            "selectedFrame": "None",
+                            "topMargin": "",
+                            "bottomMargin": "",
+                            "leftMargin": "",
+                            "rightMargin": "",
+                            "backgroundOption": "color",
+                            "backgroundColor": "#ffffff",
+                            "textColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 300
+                        },
+                        "latest_refresh_time": "2025-10-07T00:19:51.272637+02:00"
+                    },
+                    {
+                        "plugin_id": "wpotd",
+                        "name": "Random Image",
+                        "plugin_settings": {
+                            "randomizeWpotd": "true",
+                            "shrinkToFitWpotd": "true"
+                        },
+                        "refresh": {
+                            "interval": 300
+                        },
+                        "latest_refresh_time": null
+                    },
+                    {
+                        "plugin_id": "clock",
+                        "name": "Clock",
+                        "plugin_settings": {
+                            "selectedClockFace": "Digital Clock",
+                            "primaryColor": "#ffffff",
+                            "secondaryColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 300
+                        },
+                        "latest_refresh_time": "2025-10-07T01:19:32.425287+02:00"
+                    },
+                    {
+                        "plugin_id": "comic",
+                        "name": "comic daily",
+                        "plugin_settings": {
+                            "comic": "XKCD",
+                            "titleCaption": "true",
+                            "fontSize": "14"
+                        },
+                        "refresh": {
+                            "interval": 300
+                        },
+                        "latest_refresh_time": null
+                    }
+                ],
+                "current_plugin_index": null
+            }
+        ],
+        "active_playlist": "Default"
+    },
+    "refresh_info": {
+        "refresh_time": "2025-10-07T01:19:32.425287+02:00",
+        "image_hash": "45ce39b8b91be6f60a9478d4ff758f7e316708934a1b2d0784524d791d5eff0e",
+        "refresh_type": "Playlist",
+        "plugin_id": "clock",
+        "playlist": "Default",
+        "plugin_instance": "Clock"
+    },
+    "inverted_image": null,
+    "log_system_stats": null,
+    "timezone": "Europe/Paris",
+    "time_format": "24h",
+    "plugin_cycle_interval_seconds": 3600,
+    "image_settings": {
+        "saturation": 1.0,
+        "brightness": 1.0,
+        "sharpness": 1.0,
+        "contrast": 1.0
+    }
 }
