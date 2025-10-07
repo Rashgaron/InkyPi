@@ -14,10 +14,35 @@
                 "end_time": "24:00",
                 "plugins": [
                     {
-                        "plugin_id": "weather",
-                        "name": "Weather",
+                        "plugin_id": "clock",
+                        "name": "clock",
                         "plugin_settings": {
-                            "latitude": "43.56285455113491",
+                            "selectedClockFace": "Digital Clock",
+                            "primaryColor": "#db3246",
+                            "secondaryColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 60
+                        },
+                        "latest_refresh_time": "2025-10-07T02:26:41.564173+02:00"
+                    },
+                    {
+                        "plugin_id": "wpotd",
+                        "name": "picture of the day",
+                        "plugin_settings": {
+                            "randomizeWpotd": "true",
+                            "shrinkToFitWpotd": "true"
+                        },
+                        "refresh": {
+                            "interval": 60
+                        },
+                        "latest_refresh_time": "2025-10-07T02:35:19.103742+02:00"
+                    },
+                    {
+                        "plugin_id": "weather",
+                        "name": "weather",
+                        "plugin_settings": {
+                            "latitude": "43.577157594779464",
                             "longitude": "1.42822265625",
                             "weatherProvider": "OpenWeatherMap",
                             "units": "metric",
@@ -26,6 +51,7 @@
                             "displayRefreshTime": "true",
                             "displayMetrics": "true",
                             "displayGraph": "true",
+                            "displayRain": "true",
                             "displayForecast": "true",
                             "forecastDays": "7",
                             "weatherTimeZone": "locationTimeZone",
@@ -39,67 +65,123 @@
                             "textColor": "#000000"
                         },
                         "refresh": {
-                            "interval": 300
+                            "interval": 120
                         },
-                        "latest_refresh_time": "2025-10-07T00:19:51.272637+02:00"
+                        "latest_refresh_time": "2025-10-07T02:51:07.462076+02:00"
                     },
                     {
                         "plugin_id": "wpotd",
-                        "name": "Random Image",
+                        "name": "wikipedia random image",
                         "plugin_settings": {
                             "randomizeWpotd": "true",
                             "shrinkToFitWpotd": "true"
                         },
                         "refresh": {
-                            "interval": 300
+                            "interval": 60
                         },
-                        "latest_refresh_time": null
+                        "latest_refresh_time": "2025-10-07T02:45:12.126224+02:00"
                     },
                     {
-                        "plugin_id": "clock",
-                        "name": "Clock",
+                        "plugin_id": "newspaper",
+                        "name": "newspaper",
                         "plugin_settings": {
-                            "selectedClockFace": "Digital Clock",
-                            "primaryColor": "#ffffff",
-                            "secondaryColor": "#000000"
+                            "newspaperName": "La Vanguardia",
+                            "newspaperSlug": "spa_lv",
+                            "locationSearch": "Barcelona, Spain"
                         },
                         "refresh": {
-                            "interval": 300
+                            "interval": 60
                         },
-                        "latest_refresh_time": "2025-10-07T01:19:32.425287+02:00"
+                        "latest_refresh_time": "2025-10-07T02:46:49.533554+02:00"
                     },
                     {
-                        "plugin_id": "comic",
-                        "name": "comic daily",
+                        "plugin_id": "ai_text",
+                        "name": "frase",
                         "plugin_settings": {
-                            "comic": "XKCD",
-                            "titleCaption": "true",
-                            "fontSize": "14"
+                            "title": "Frase famosa",
+                            "textModel": "gpt-4o-mini",
+                            "textPrompt": "Dame una sola frase famosa para reflexionar",
+                            "selectedFrame": "Corner",
+                            "topMargin": "",
+                            "bottomMargin": "",
+                            "leftMargin": "",
+                            "rightMargin": "",
+                            "backgroundOption": "color",
+                            "backgroundColor": "#ffffff",
+                            "textColor": "#000000"
                         },
                         "refresh": {
-                            "interval": 300
+                            "interval": 60
+                        },
+                        "latest_refresh_time": "2025-10-07T02:47:53.864173+02:00"
+                    },
+                    {
+                        "plugin_id": "unsplash",
+                        "name": "Unsplash",
+                        "plugin_settings": {
+                            "search_query": "",
+                            "collections": "",
+                            "content_filter": "high",
+                            "color": "",
+                            "orientation": ""
+                        },
+                        "refresh": {
+                            "interval": 60
+                        },
+                        "latest_refresh_time": "2025-10-07T02:24:27.810382+02:00"
+                    },
+                    {
+                        "plugin_id": "calendar",
+                        "name": "Calendar 2",
+                        "plugin_settings": {
+                            "calendarColors[]": [
+                                "#cf30c9",
+                                "#007bff"
+                            ],
+                            "calendarURLs[]": [
+                                "https://rashgaron.duckdns.org/remote.php/dav/public-calendars/3FAH7L4tBEqsaBPK?export",
+                                "https://calendar.google.com/calendar/ical/dannirodriguez99%40gmail.com/public/basic.ics"
+                            ],
+                            "viewMode": "dayGridMonth",
+                            "language": "en",
+                            "displayTitle": "true",
+                            "displayWeekends": "true",
+                            "displayEventTime": "true",
+                            "weekStartDay": "0",
+                            "fontSize": "normal",
+                            "selectedFrame": "None",
+                            "topMargin": "",
+                            "bottomMargin": "",
+                            "leftMargin": "",
+                            "rightMargin": "",
+                            "backgroundOption": "color",
+                            "backgroundColor": "#ffffff",
+                            "textColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 60
                         },
                         "latest_refresh_time": null
                     }
                 ],
-                "current_plugin_index": null
+                "current_plugin_index": 5
             }
         ],
         "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": "2025-10-07T01:19:32.425287+02:00",
-        "image_hash": "45ce39b8b91be6f60a9478d4ff758f7e316708934a1b2d0784524d791d5eff0e",
+        "refresh_time": "2025-10-07T02:51:07.462076+02:00",
+        "image_hash": "1141f2d28cfcfa0a4432dd216441484897f6172900a0c44bfe925def1f147aa4",
         "refresh_type": "Playlist",
-        "plugin_id": "clock",
+        "plugin_id": "weather",
         "playlist": "Default",
-        "plugin_instance": "Clock"
+        "plugin_instance": "weather"
     },
     "inverted_image": null,
-    "log_system_stats": null,
+    "log_system_stats": "on",
     "timezone": "Europe/Paris",
     "time_format": "24h",
-    "plugin_cycle_interval_seconds": 3600,
+    "plugin_cycle_interval_seconds": 60,
     "image_settings": {
         "saturation": 1.0,
         "brightness": 1.0,

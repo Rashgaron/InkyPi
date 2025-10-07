@@ -29,6 +29,7 @@ UNITS = {
 WEATHER_URL = "https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={long}&units={units}&exclude=minutely&appid={api_key}"
 AIR_QUALITY_URL = "http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={long}&appid={api_key}"
 GEOCODING_URL = "http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={long}&limit=1&appid={api_key}"
+HOME_ASSISTANT_URL = "http://192.168.1.80:8123/api/states/sensor.alexa_comedor_temperatura" 
 
 OPEN_METEO_FORECAST_URL = "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={long}&hourly=temperature_2m,precipitation,precipitation_probability,relative_humidity_2m,surface_pressure,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&current_weather=true&timezone=auto&models=best_match&forecast_days={forecast_days}"
 OPEN_METEO_AIR_QUALITY_URL = "https://air-quality-api.open-meteo.com/v1/air-quality?latitude={lat}&longitude={long}&hourly=european_aqi,uv_index,uv_index_clear_sky&timezone=auto"
@@ -69,6 +70,7 @@ class Weather(BasePlugin):
         try:
             if weather_provider == "OpenWeatherMap":
                 api_key = device_config.load_env_key("OPEN_WEATHER_MAP_SECRET")
+                home_assistant_api_key = device_config.load_env_key("HOME_ASSISTANT_KEY")
                 if not api_key:
                     raise RuntimeError("Open Weather Map API Key not configured.")
                 weather_data = self.get_weather_data(api_key, units, lat, long)
@@ -78,10 +80,10 @@ class Weather(BasePlugin):
                 if settings.get('weatherTimeZone', 'locationTimeZone') == 'locationTimeZone':
                     logger.info("Using location timezone for OpenWeatherMap data.")
                     wtz = self.parse_timezone(weather_data)
-                    template_params = self.parse_weather_data(weather_data, aqi_data, wtz, units, time_format)
+                    template_params = self.parse_weather_data(weather_data, aqi_data, wtz, units, time_format, home_assistant_api_key)
                 else:
                     logger.info("Using configured timezone for OpenWeatherMap data.")
-                    template_params = self.parse_weather_data(weather_data, aqi_data, tz, units, time_format)
+                    template_params = self.parse_weather_data(weather_data, aqi_data, tz, units, time_format, home_assistant_api_key)
             elif weather_provider == "OpenMeteo":
                 forecast_days = 7
                 weather_data = self.get_open_meteo_data(lat, long, units, forecast_days + 1)
@@ -115,10 +117,15 @@ class Weather(BasePlugin):
             raise RuntimeError("Failed to take screenshot, please check logs.")
         return image
 
-    def parse_weather_data(self, weather_data, aqi_data, tz, units, time_format):
+    def parse_weather_data(self, weather_data, aqi_data, tz, units, time_format, home_assistant_api_key):
         current = weather_data.get("current")
         dt = datetime.fromtimestamp(current.get('dt'), tz=timezone.utc).astimezone(tz)
         current_icon = current.get("weather")[0].get("icon").replace("n", "d")
+        headers = {
+            "Authorization": f"Bearer {home_assistant_api_key}"
+        }
+        response = requests.get(HOME_ASSISTANT_URL, headers=headers)
+        res = response.json()
         data = {
             "current_date": dt.strftime("%A, %B %d"),
             "current_day_icon": self.get_plugin_dir(f'icons/{current_icon}.png'),
@@ -127,7 +134,7 @@ class Weather(BasePlugin):
             "temperature_unit": UNITS[units]["temperature"],
             "units": units,
             "time_format": time_format,
-            "current_temperature": 30
+            "current_temperature_home": res["state"]
         }
         data['forecast'] = self.parse_forecast(weather_data.get('daily'), tz)
         data['data_points'] = self.parse_data_points(weather_data, aqi_data, tz, units, time_format)
