@@ -24,7 +24,7 @@
                         "refresh": {
                             "interval": 60
                         },
-                        "latest_refresh_time": "2025-10-07T02:26:41.564173+02:00"
+                        "latest_refresh_time": "2025-10-07T03:06:23.128099+02:00"
                     },
                     {
                         "plugin_id": "wpotd",
@@ -36,7 +36,7 @@
                         "refresh": {
                             "interval": 60
                         },
-                        "latest_refresh_time": "2025-10-07T02:35:19.103742+02:00"
+                        "latest_refresh_time": "2025-10-07T03:08:26.752948+02:00"
                     },
                     {
                         "plugin_id": "weather",
@@ -67,7 +67,7 @@
                         "refresh": {
                             "interval": 120
                         },
-                        "latest_refresh_time": "2025-10-07T02:51:07.462076+02:00"
+                        "latest_refresh_time": "2025-10-07T02:57:19.023285+02:00"
                     },
                     {
                         "plugin_id": "wpotd",
@@ -128,19 +128,17 @@
                         "refresh": {
                             "interval": 60
                         },
-                        "latest_refresh_time": "2025-10-07T02:24:27.810382+02:00"
+                        "latest_refresh_time": "2025-10-07T03:03:44.903630+02:00"
                     },
                     {
                         "plugin_id": "calendar",
                         "name": "Calendar 2",
                         "plugin_settings": {
                             "calendarColors[]": [
-                                "#cf30c9",
-                                "#007bff"
+                                "#cf30c9"
                             ],
                             "calendarURLs[]": [
-                                "https://rashgaron.duckdns.org/remote.php/dav/public-calendars/3FAH7L4tBEqsaBPK?export",
-                                "https://calendar.google.com/calendar/ical/dannirodriguez99%40gmail.com/public/basic.ics"
+                                "https://rashgaron.duckdns.org/remote.php/dav/public-calendars/3FAH7L4tBEqsaBPK?export"
                             ],
                             "viewMode": "dayGridMonth",
                             "language": "en",
@@ -161,21 +159,21 @@
                         "refresh": {
                             "interval": 60
                         },
-                        "latest_refresh_time": null
+                        "latest_refresh_time": "2025-10-07T03:06:43.511013+02:00"
                     }
                 ],
-                "current_plugin_index": 5
+                "current_plugin_index": 1
             }
         ],
         "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": "2025-10-07T02:51:07.462076+02:00",
-        "image_hash": "1141f2d28cfcfa0a4432dd216441484897f6172900a0c44bfe925def1f147aa4",
+        "refresh_time": "2025-10-07T03:08:26.752948+02:00",
+        "image_hash": "dd91631b180db30ab76117cfec081b81690581c74a1c403eeb6e1b46dcdd0131",
         "refresh_type": "Playlist",
-        "plugin_id": "weather",
+        "plugin_id": "wpotd",
         "playlist": "Default",
-        "plugin_instance": "weather"
+        "plugin_instance": "picture of the day"
     },
     "inverted_image": null,
     "log_system_stats": "on",
