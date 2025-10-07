@@ -126,7 +126,8 @@ class Weather(BasePlugin):
             "feels_like": str(round(current.get("feels_like"))),
             "temperature_unit": UNITS[units]["temperature"],
             "units": units,
-            "time_format": time_format
+            "time_format": time_format,
+            "current_temperature": 30
         }
         data['forecast'] = self.parse_forecast(weather_data.get('daily'), tz)
         data['data_points'] = self.parse_data_points(weather_data, aqi_data, tz, units, time_format)
