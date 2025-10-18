@@ -121,11 +121,6 @@ class Weather(BasePlugin):
         current = weather_data.get("current")
         dt = datetime.fromtimestamp(current.get('dt'), tz=timezone.utc).astimezone(tz)
         current_icon = current.get("weather")[0].get("icon").replace("n", "d")
-        headers = {
-            "Authorization": f"Bearer {home_assistant_api_key}"
-        }
-        response = requests.get(HOME_ASSISTANT_URL, headers=headers)
-        res = response.json()
         data = {
             "current_date": dt.strftime("%A, %B %d"),
             "current_day_icon": self.get_plugin_dir(f'icons/{current_icon}.png'),
@@ -134,7 +129,6 @@ class Weather(BasePlugin):
             "temperature_unit": UNITS[units]["temperature"],
             "units": units,
             "time_format": time_format,
-            "current_temperature_home": res["state"]
         }
         data['forecast'] = self.parse_forecast(weather_data.get('daily'), tz)
         data['data_points'] = self.parse_data_points(weather_data, aqi_data, tz, units, time_format)
