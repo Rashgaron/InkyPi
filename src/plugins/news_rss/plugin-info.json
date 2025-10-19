@@ -1,0 +1,5 @@
+{
+    "display_name": "News RSS",
+    "id": "news_rss",
+    "class": "NewsRSS"
+}
