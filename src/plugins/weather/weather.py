@@ -47,6 +47,11 @@ class Weather(BasePlugin):
             "service": "OpenWeatherMap",
             "expected_key": "OPEN_WEATHER_MAP_SECRET"
         }
+        template_params['ha_key'] = {
+            "required": True,
+            "service": "HomeAssistant",
+            "expected_key": "HOME_ASSISTANT_KEY"
+        }
         template_params['style_settings'] = True
         return template_params
 
@@ -71,6 +76,7 @@ class Weather(BasePlugin):
             if weather_provider == "OpenWeatherMap":
                 api_key = device_config.load_env_key("OPEN_WEATHER_MAP_SECRET")
                 home_assistant_api_key = device_config.load_env_key("HOME_ASSISTANT_KEY")
+                print(f"Home Assistant Key: {home_assistant_api_key}")
                 if not api_key:
                     raise RuntimeError("Open Weather Map API Key not configured.")
                 weather_data = self.get_weather_data(api_key, units, lat, long)
@@ -117,10 +123,28 @@ class Weather(BasePlugin):
             raise RuntimeError("Failed to take screenshot, please check logs.")
         return image
 
+    def get_ha_temperature(self, home_assistant_api_key):
+        url = "https://rashgaron-home.duckdns.org/api/states/sensor.alexa_comedor_temperatura"
+        bearer_token = home_assistant_api_key
+        headers = {
+            "Authorization": f"Bearer {bearer_token}",
+            "Content-Type": "application/json",
+        }
+        response = requests.get(url, headers=headers)
+        if response.status_code == 200:
+            ha_data = response.json()
+            current_temperature_ha = ha_data.get("state")
+            logger.info(f"Home Assistant Temperature: {current_temperature_ha}")
+        else: 
+            logger.error(f"Failed to retrieve data from Home Assistant: {response.content}")
+            current_temperature_ha = "N/A"
+        return current_temperature_ha
+        
     def parse_weather_data(self, weather_data, aqi_data, tz, units, time_format, home_assistant_api_key):
         current = weather_data.get("current")
         dt = datetime.fromtimestamp(current.get('dt'), tz=timezone.utc).astimezone(tz)
         current_icon = current.get("weather")[0].get("icon").replace("n", "d")
+        current_temperature_ha = self.get_ha_temperature(home_assistant_api_key) 
         data = {
             "current_date": dt.strftime("%A, %B %d"),
             "current_day_icon": self.get_plugin_dir(f'icons/{current_icon}.png'),
@@ -129,6 +153,7 @@ class Weather(BasePlugin):
             "temperature_unit": UNITS[units]["temperature"],
             "units": units,
             "time_format": time_format,
+            "room_temperature": current_temperature_ha
         }
         data['forecast'] = self.parse_forecast(weather_data.get('daily'), tz)
         data['data_points'] = self.parse_data_points(weather_data, aqi_data, tz, units, time_format)
