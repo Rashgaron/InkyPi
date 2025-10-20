@@ -1,7 +1,7 @@
 {
     "name": "InkyPi",
     "orientation": "horizontal",
-    "inverted_image": false,
+    "inverted_image": null,
     "scheduler_sleep_time": 60,
     "startup": false,
     "resolution": [
@@ -12,18 +12,43 @@
         "playlists": [
             {
                 "name": "Default",
-                "start_time": "00:00",
+                "start_time": "09:00",
                 "end_time": "24:00",
-                "plugins": [],
-                "current_plugin_index": null
+                "plugins": [
+                    {
+                        "plugin_id": "image_folder",
+                        "name": "Random Images",
+                        "plugin_settings": {
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
+                            "padImage": "false"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": "2025-10-21T00:48:25.650027+02:00"
+                    }
+                ],
+                "current_plugin_index": 0
             }
         ],
-        "active_playlist": null
+        "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": null,
-        "image_hash": null,
-        "refresh_type": null,
-        "plugin_id": null
+        "refresh_time": "2025-10-21T00:48:25.650027+02:00",
+        "image_hash": "b0d1e19eb8ff9c43d4edd341c3d5f44e2986156d5837a8ad740824e088dfe4ca",
+        "refresh_type": "Playlist",
+        "plugin_id": "image_folder",
+        "playlist": "Default",
+        "plugin_instance": "Random Images"
+    },
+    "log_system_stats": null,
+    "timezone": "Europe/Paris",
+    "time_format": "12h",
+    "plugin_cycle_interval_seconds": 1800,
+    "image_settings": {
+        "saturation": 1.0,
+        "brightness": 1.0,
+        "sharpness": 1.0,
+        "contrast": 1.0
     }
 }
