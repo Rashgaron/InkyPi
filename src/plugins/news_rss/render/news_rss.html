@@ -1,0 +1,12 @@
+{% extends "plugin.html" %}
+
+{% block content %}
+<div class="text-content">
+  <div class="title">Noticias España</div>
+  <div class="content">
+      {% for item in rss_items %}
+          <p href="{{ item }}">{{loop.index}}. {{ item.title }}</p>
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}
