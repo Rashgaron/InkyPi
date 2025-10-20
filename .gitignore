@@ -167,5 +167,3 @@ cython_debug/
 mock_display_output/
 src/static/images/current_image.png
 src/static/images/current_image.png
-src/config/device.json
-src/config/device_dev.json
