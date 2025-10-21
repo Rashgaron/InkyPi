@@ -1,10 +1,14 @@
 import json
+
+import requests
 from plugins.base_plugin.base_plugin import BasePlugin
 from openai import OpenAI
-from datetime import date 
+from datetime import date
 import logging
 
 logger = logging.getLogger(__name__)
+
+RANDOM_WORD_URL = "https://random-word-api.vercel.app/api?words=1"
 
 class WordOfTheDay(BasePlugin):
     def generate_settings_template(self):
@@ -31,8 +35,9 @@ class WordOfTheDay(BasePlugin):
             raise RuntimeError("Text Model is required.")
 
         try:
+            word = self.get_random_word()
             ai_client = OpenAI(api_key=api_key)
-            prompt_response = self.fetch_text_prompt(ai_client, text_model, text_lang)
+            prompt_response = self.fetch_text_prompt(ai_client, text_model, text_lang, word)
 
         except Exception as e:
             logger.error(f"Failed to make Open AI request: {str(e)}")
@@ -62,26 +67,37 @@ class WordOfTheDay(BasePlugin):
         return image
 
     @staticmethod
-    def fetch_text_prompt(ai_client, model, text_lang):
+    def get_random_word():
+        # Make the API call
+        response = requests.get(RANDOM_WORD_URL) 
+
+        logger.info(f"Random word: {response}")
+        try:
+            word = response.json()
+            logger.info(f"Parsed JSON: {word}")
+            return word 
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse JSON: {e}")
+            return None
+
+    @staticmethod
+    def fetch_text_prompt(ai_client, model, text_lang, word):
         logger.info(f"Getting random text prompt from in {text_lang}, model: {model}")
 
-        today = date.today().strftime("%Y-%m-%d")
-
         system_content = "You are an assistant that returns only valid JSON objects."
+
         user_content = f"""
-        Today is {today}.
-        Give me a *unique* and *interesting* word of the day in {text_lang}.
-        The word must change naturally every day and should not repeat frequently.
+        Given the word '{word}', provide its equivalent in {text_lang}.
 
-        Return your answer strictly as a JSON object with the following fields:
-        - word: the word itself (in {text_lang}). 
-        - type: part of speech (noun, verb, adjective, etc.). 
-        - description: a concise definition in English. 
-        - example: one clear example sentence showing its correct usage (in {text_lang}). 
-        - lecture: Include lecture only if the word is not in the roman alphabet.
+        Return a valid JSON object with the following fields:
+        - word: the translated word in {text_lang}
+        - type: part of speech (noun, verb, adjective, etc.)
+        - description: a concise definition in English
+        - example: one clear example sentence showing correct usage (in {text_lang})
+        - lecture: include ONLY if the word is not written in the Roman alphabet
 
-        Do NOT include any text before or after the JSON object.
-            """
+        The JSON must be strictly valid and contain no additional text, comments, or formatting.
+        """
 
         # Make the API call
         response = ai_client.chat.completions.create(
@@ -91,7 +107,7 @@ class WordOfTheDay(BasePlugin):
                 {"role": "system", "content": system_content},
                 {"role": "user", "content": user_content},
             ],
-            temperature=1,
+            temperature=0.9,
         )
 
         prompt = response.choices[0].message.content
