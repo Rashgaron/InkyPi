@@ -1,7 +1,7 @@
 {
     "name": "InkyPi",
     "orientation": "horizontal",
-    "inverted_image": false,
+    "inverted_image": null,
     "scheduler_sleep_time": 60,
     "startup": false,
     "resolution": [
@@ -12,18 +12,149 @@
         "playlists": [
             {
                 "name": "Default",
-                "start_time": "00:00",
+                "start_time": "09:00",
                 "end_time": "24:00",
-                "plugins": [],
-                "current_plugin_index": null
+                "plugins": [
+                    {
+                        "plugin_id": "image_folder",
+                        "name": "Random Images",
+                        "plugin_settings": {
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
+                            "padImage": "false"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": "2025-10-21T17:16:31.155010+02:00"
+                    },
+                    {
+                        "plugin_id": "image_folder",
+                        "name": "random 2",
+                        "plugin_settings": {
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
+                            "padImage": "true"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": "2025-10-21T17:47:01.597894+02:00"
+                    },
+                    {
+                        "plugin_id": "image_folder",
+                        "name": "random 3",
+                        "plugin_settings": {
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
+                            "padImage": "true"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": null
+                    },
+                    {
+                        "plugin_id": "image_folder",
+                        "name": "random 4",
+                        "plugin_settings": {
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
+                            "padImage": "true"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": null
+                    },
+                    {
+                        "plugin_id": "weather",
+                        "name": "Weather TLS",
+                        "plugin_settings": {
+                            "latitude": "43.60656884401894",
+                            "longitude": "1.4159180223941803",
+                            "weatherProvider": "OpenWeatherMap",
+                            "units": "metric",
+                            "titleSelection": "location",
+                            "customTitle": "",
+                            "displayRefreshTime": "true",
+                            "displayMetrics": "true",
+                            "displayGraph": "true",
+                            "displayRain": "true",
+                            "displayForecast": "true",
+                            "forecastDays": "7",
+                            "weatherTimeZone": "locationTimeZone",
+                            "selectedFrame": "None",
+                            "topMargin": "",
+                            "bottomMargin": "",
+                            "leftMargin": "",
+                            "rightMargin": "",
+                            "backgroundOption": "color",
+                            "backgroundColor": "#ffffff",
+                            "textColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": null
+                    }
+                ],
+                "current_plugin_index": 1
+            },
+            {
+                "name": "Weather",
+                "start_time": "08:45",
+                "end_time": "09:30",
+                "plugins": [
+                    {
+                        "plugin_id": "weather",
+                        "name": "Weather",
+                        "plugin_settings": {
+                            "latitude": "43.52465500687188",
+                            "longitude": "1.417236328125",
+                            "weatherProvider": "OpenWeatherMap",
+                            "units": "metric",
+                            "titleSelection": "location",
+                            "customTitle": "",
+                            "displayRefreshTime": "true",
+                            "displayMetrics": "true",
+                            "displayGraph": "true",
+                            "displayRain": "true",
+                            "displayForecast": "true",
+                            "forecastDays": "7",
+                            "weatherTimeZone": "locationTimeZone",
+                            "selectedFrame": "None",
+                            "topMargin": "",
+                            "bottomMargin": "",
+                            "leftMargin": "",
+                            "rightMargin": "",
+                            "backgroundOption": "color",
+                            "backgroundColor": "#ffffff",
+                            "textColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": "2025-10-21T08:45:44.907399+02:00"
+                    }
+                ],
+                "current_plugin_index": 0
             }
         ],
-        "active_playlist": null
+        "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": null,
-        "image_hash": null,
-        "refresh_type": null,
-        "plugin_id": null
+        "refresh_time": "2025-10-21T17:47:01.597894+02:00",
+        "image_hash": "f92ca5f5c89e8437eafedec689401c7f40dd794830eb588ea1ba63df3e671d4d",
+        "refresh_type": "Playlist",
+        "plugin_id": "image_folder",
+        "playlist": "Default",
+        "plugin_instance": "random 2"
+    },
+    "log_system_stats": null,
+    "timezone": "Europe/Paris",
+    "time_format": "12h",
+    "plugin_cycle_interval_seconds": 1800,
+    "image_settings": {
+        "saturation": 1.0,
+        "brightness": 1.0,
+        "sharpness": 2.0,
+        "contrast": 1.0
     }
 }
