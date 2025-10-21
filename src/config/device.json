@@ -40,6 +40,26 @@
                         "latest_refresh_time": "2025-10-21T17:47:01.597894+02:00"
                     },
                     {
+                        "plugin_id": "word_of_the_day",
+                        "name": "JP Word of the day",
+                        "plugin_settings": {
+                            "wordLang": "ja",
+                            "textModel": "gpt-4o-mini",
+                            "selectedFrame": "None",
+                            "topMargin": "",
+                            "bottomMargin": "",
+                            "leftMargin": "",
+                            "rightMargin": "",
+                            "backgroundOption": "color",
+                            "backgroundColor": "#ffffff",
+                            "textColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": "2025-10-21T23:29:08.876368+02:00"
+                    },
+                    {
                         "plugin_id": "image_folder",
                         "name": "random 3",
                         "plugin_settings": {
@@ -93,26 +113,6 @@
                             "interval": 1800
                         },
                         "latest_refresh_time": null
-                    },
-                    {
-                        "plugin_id": "word_of_the_day",
-                        "name": "JP Word of the day",
-                        "plugin_settings": {
-                            "wordLang": "ja",
-                            "textModel": "gpt-4o-mini",
-                            "selectedFrame": "None",
-                            "topMargin": "",
-                            "bottomMargin": "",
-                            "leftMargin": "",
-                            "rightMargin": "",
-                            "backgroundOption": "color",
-                            "backgroundColor": "#ffffff",
-                            "textColor": "#000000"
-                        },
-                        "refresh": {
-                            "interval": 1800
-                        },
-                        "latest_refresh_time": "2025-10-21T19:00:23.046092+02:00"
                     }
                 ],
                 "current_plugin_index": 1
@@ -160,8 +160,8 @@
         "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": "2025-10-21T19:00:23.046092+02:00",
-        "image_hash": "642f39e7e2b33f2024b046ce82c707f65f11e8766514d67b7043ac400df55a1e",
+        "refresh_time": "2025-10-21T23:29:08.876368+02:00",
+        "image_hash": "f997b3989d1ef107de4a9397f330bb45bed54f3fd74845b7e63e6971de373555",
         "refresh_type": "Playlist",
         "plugin_id": "word_of_the_day",
         "playlist": "Default",
