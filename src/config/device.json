@@ -19,25 +19,29 @@
                         "plugin_id": "image_folder",
                         "name": "Random Images",
                         "plugin_settings": {
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
-                            "padImage": "false"
+                            "padImage": "false",
+                            "backgroundOption": "blur",
+                            "backgroundColor": "#000000",
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T12:25:26.532604+02:00"
+                        "latest_refresh_time": "2025-10-22T15:31:42.281594+02:00"
                     },
                     {
                         "plugin_id": "image_folder",
                         "name": "random 2",
                         "plugin_settings": {
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
-                            "padImage": "true"
+                            "padImage": "false",
+                            "backgroundOption": "blur",
+                            "backgroundColor": "#000000",
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-21T17:47:01.597894+02:00"
+                        "latest_refresh_time": "2025-10-22T12:56:16.596852+02:00"
                     },
                     {
                         "plugin_id": "word_of_the_day",
@@ -57,31 +61,35 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T09:31:54.592755+02:00"
+                        "latest_refresh_time": "2025-10-22T13:26:47.019581+02:00"
                     },
                     {
                         "plugin_id": "image_folder",
                         "name": "random 3",
                         "plugin_settings": {
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
-                            "padImage": "true"
+                            "padImage": "false",
+                            "backgroundOption": "blur",
+                            "backgroundColor": "#000000",
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T10:02:33.202149+02:00"
+                        "latest_refresh_time": "2025-10-22T13:57:22.317895+02:00"
                     },
                     {
                         "plugin_id": "image_folder",
                         "name": "random 4",
                         "plugin_settings": {
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
-                            "padImage": "true"
+                            "padImage": "false",
+                            "backgroundOption": "blur",
+                            "backgroundColor": "#000000",
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T10:33:06.324520+02:00"
+                        "latest_refresh_time": "2025-10-22T16:06:29.679712+02:00"
                     },
                     {
                         "plugin_id": "weather",
@@ -112,7 +120,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T12:23:52.873000+02:00"
+                        "latest_refresh_time": "2025-10-22T14:58:26.019887+02:00"
                     }
                 ],
                 "current_plugin_index": 0
@@ -151,7 +159,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T09:01:06.049000+02:00"
+                        "latest_refresh_time": "2025-10-22T16:01:04.705067+02:00"
                     }
                 ],
                 "current_plugin_index": 0
@@ -160,12 +168,10 @@
         "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": "2025-10-22T12:25:26.532604+02:00",
-        "image_hash": "4a1ab7c3c5786dbfa7019d6cb035c01c5ddd64ef23871f6d000db0c25e548c89",
-        "refresh_type": "Playlist",
-        "plugin_id": "image_folder",
-        "playlist": "Default",
-        "plugin_instance": "Random Images"
+        "refresh_time": "2025-10-22T16:11:45.361290+02:00",
+        "image_hash": "05c793fa02955d447a17d13cc11d1393c8f25c5956bd318ed6add7c1615589f4",
+        "refresh_type": "Manual Update",
+        "plugin_id": "image_folder"
     },
     "log_system_stats": null,
     "timezone": "Europe/Paris",
@@ -174,7 +180,7 @@
     "image_settings": {
         "saturation": 1.0,
         "brightness": 1.0,
-        "sharpness": 2.0,
+        "sharpness": 1.0,
         "contrast": 1.0
     }
 }
