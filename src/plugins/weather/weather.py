@@ -134,6 +134,7 @@ class Weather(BasePlugin):
         if response.status_code == 200:
             ha_data = response.json()
             current_temperature_ha = ha_data.get("state")
+            current_temperature_ha = "N/A" if current_temperature_ha == "unavailable" else current_temperature_ha
             logger.info(f"Home Assistant Temperature: {current_temperature_ha}")
         else: 
             logger.error(f"Failed to retrieve data from Home Assistant: {response.content}")
