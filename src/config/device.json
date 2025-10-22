@@ -12,7 +12,7 @@
         "playlists": [
             {
                 "name": "Default",
-                "start_time": "09:00",
+                "start_time": "09:30",
                 "end_time": "24:00",
                 "plugins": [
                     {
@@ -25,7 +25,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-21T17:16:31.155010+02:00"
+                        "latest_refresh_time": "2025-10-22T12:25:26.532604+02:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -57,7 +57,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-21T23:29:08.876368+02:00"
+                        "latest_refresh_time": "2025-10-22T09:31:54.592755+02:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -69,7 +69,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": null
+                        "latest_refresh_time": "2025-10-22T10:02:33.202149+02:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -81,7 +81,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": null
+                        "latest_refresh_time": "2025-10-22T10:33:06.324520+02:00"
                     },
                     {
                         "plugin_id": "weather",
@@ -112,10 +112,10 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": null
+                        "latest_refresh_time": "2025-10-22T12:23:52.873000+02:00"
                     }
                 ],
-                "current_plugin_index": 1
+                "current_plugin_index": 0
             },
             {
                 "name": "Weather",
@@ -151,7 +151,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-21T08:45:44.907399+02:00"
+                        "latest_refresh_time": "2025-10-22T09:01:06.049000+02:00"
                     }
                 ],
                 "current_plugin_index": 0
@@ -160,12 +160,12 @@
         "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": "2025-10-21T23:29:08.876368+02:00",
-        "image_hash": "f997b3989d1ef107de4a9397f330bb45bed54f3fd74845b7e63e6971de373555",
+        "refresh_time": "2025-10-22T12:25:26.532604+02:00",
+        "image_hash": "4a1ab7c3c5786dbfa7019d6cb035c01c5ddd64ef23871f6d000db0c25e548c89",
         "refresh_type": "Playlist",
-        "plugin_id": "word_of_the_day",
+        "plugin_id": "image_folder",
         "playlist": "Default",
-        "plugin_instance": "JP Word of the day"
+        "plugin_instance": "Random Images"
     },
     "log_system_stats": null,
     "timezone": "Europe/Paris",
