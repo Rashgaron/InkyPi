@@ -22,12 +22,12 @@
                             "padImage": "false",
                             "backgroundOption": "blur",
                             "backgroundColor": "#000000",
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved"
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/halloween"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T15:31:42.281594+02:00"
+                        "latest_refresh_time": "2025-10-24T14:42:46.573234+02:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -41,7 +41,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T12:56:16.596852+02:00"
+                        "latest_refresh_time": "2025-10-24T15:41:05.244009+02:00"
                     },
                     {
                         "plugin_id": "word_of_the_day",
@@ -61,7 +61,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T13:26:47.019581+02:00"
+                        "latest_refresh_time": "2025-10-24T15:41:48.829290+02:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -70,12 +70,12 @@
                             "padImage": "false",
                             "backgroundOption": "blur",
                             "backgroundColor": "#000000",
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved"
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/halloween"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T13:57:22.317895+02:00"
+                        "latest_refresh_time": "2025-10-24T16:09:51.489935+02:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -89,7 +89,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T16:06:29.679712+02:00"
+                        "latest_refresh_time": "2025-10-24T13:41:23.053727+02:00"
                     },
                     {
                         "plugin_id": "weather",
@@ -120,10 +120,10 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T14:58:26.019887+02:00"
+                        "latest_refresh_time": "2025-10-24T14:11:57.976019+02:00"
                     }
                 ],
-                "current_plugin_index": 0
+                "current_plugin_index": 1
             },
             {
                 "name": "Weather",
@@ -159,7 +159,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-22T16:01:04.705067+02:00"
+                        "latest_refresh_time": "2025-10-24T09:05:52.076061+02:00"
                     }
                 ],
                 "current_plugin_index": 0
@@ -168,10 +168,12 @@
         "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": "2025-10-22T16:11:45.361290+02:00",
-        "image_hash": "05c793fa02955d447a17d13cc11d1393c8f25c5956bd318ed6add7c1615589f4",
-        "refresh_type": "Manual Update",
-        "plugin_id": "image_folder"
+        "refresh_time": "2025-10-24T16:09:51.489935+02:00",
+        "image_hash": "b5a2195c1ff4def80de67dfef464e5caeffa5c30a4cc1760d11fe39f3a5f2951",
+        "refresh_type": "Playlist",
+        "plugin_id": "image_folder",
+        "playlist": "Default",
+        "plugin_instance": "random 3"
     },
     "log_system_stats": null,
     "timezone": "Europe/Paris",
