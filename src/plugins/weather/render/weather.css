@@ -276,11 +276,15 @@
   line-height: 140%;
 }
 
-.feels-like {
+.feels-like, .room-temperature {
   font-size: 10cqmin;
   text-align: center;
   position: relative;
   line-height: 140%;
+}
+
+.room-temperature {
+  font-size: 6cqmin;
 }
 
 

@@ -1,6 +1,61 @@
 {
     "name": "InkyPi Development",
     "display_type": "mock",
-    "resolution": [800, 480],
-    "orientation": "horizontal"
+    "resolution": [
+        800,
+        480
+    ],
+    "orientation": "horizontal",
+    "playlist_config": {
+        "playlists": [
+            {
+                "name": "Default",
+                "start_time": "00:00",
+                "end_time": "24:00",
+                "plugins": [
+                    {
+                        "plugin_id": "weather",
+                        "name": "weather",
+                        "plugin_settings": {
+                            "latitude": "40.113370732590155",
+                            "longitude": "-2.179691791534424",
+                            "weatherProvider": "OpenWeatherMap",
+                            "units": "metric",
+                            "titleSelection": "location",
+                            "customTitle": "",
+                            "displayRefreshTime": "true",
+                            "displayMetrics": "true",
+                            "displayGraph": "true",
+                            "displayRain": "true",
+                            "displayForecast": "true",
+                            "forecastDays": "7",
+                            "weatherTimeZone": "locationTimeZone",
+                            "selectedFrame": "None",
+                            "topMargin": "",
+                            "bottomMargin": "",
+                            "leftMargin": "",
+                            "rightMargin": "",
+                            "backgroundOption": "color",
+                            "backgroundColor": "#ffffff",
+                            "textColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": "2025-10-30T18:18:03.274433+00:00"
+                    }
+                ],
+                "current_plugin_index": null
+            }
+        ],
+        "active_playlist": null
+    },
+    "refresh_info": {
+        "refresh_time": "2025-10-30T18:18:03.274433+00:00",
+        "image_hash": "b14df3b3d6f68576f9f850c97b39a48dc5c2688f81090d6e129630c9421f1713",
+        "refresh_type": "Playlist",
+        "plugin_id": "weather",
+        "playlist": "Default",
+        "plugin_instance": "weather"
+    }
 }

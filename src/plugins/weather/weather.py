@@ -29,7 +29,10 @@ UNITS = {
 WEATHER_URL = "https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={long}&units={units}&exclude=minutely&appid={api_key}"
 AIR_QUALITY_URL = "http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={long}&appid={api_key}"
 GEOCODING_URL = "http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={long}&limit=1&appid={api_key}"
-HOME_ASSISTANT_URL = "https://rashgaron-home.duckdns.org/api/states/sensor.alexa_comedor_temperatura" 
+HOME_ASSISTANT_URL = "https://rashgaron-home.duckdns.org/api/states/sensor." 
+BEDROOM_SENSOR = "sensor_temp_temperatura"
+LIVING_ROOM_SENSOR = "sensor_temp_salon"
+OFFICE_SENSOR = "sensor_temp_bureau"
 
 OPEN_METEO_FORECAST_URL = "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={long}&hourly=temperature_2m,precipitation,precipitation_probability,relative_humidity_2m,surface_pressure,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&current_weather=true&timezone=auto&models=best_match&forecast_days={forecast_days}"
 OPEN_METEO_AIR_QUALITY_URL = "https://air-quality-api.open-meteo.com/v1/air-quality?latitude={lat}&longitude={long}&hourly=european_aqi,uv_index,uv_index_clear_sky&timezone=auto"
@@ -76,7 +79,6 @@ class Weather(BasePlugin):
             if weather_provider == "OpenWeatherMap":
                 api_key = device_config.load_env_key("OPEN_WEATHER_MAP_SECRET")
                 home_assistant_api_key = device_config.load_env_key("HOME_ASSISTANT_KEY")
-                print(f"Home Assistant Key: {home_assistant_api_key}")
                 if not api_key:
                     raise RuntimeError("Open Weather Map API Key not configured.")
                 weather_data = self.get_weather_data(api_key, units, lat, long)
@@ -123,8 +125,8 @@ class Weather(BasePlugin):
             raise RuntimeError("Failed to take screenshot, please check logs.")
         return image
 
-    def get_ha_temperature(self, home_assistant_api_key):
-        url = "https://rashgaron-home.duckdns.org/api/states/sensor.alexa_comedor_temperatura"
+    def get_ha_temperature(self, home_assistant_api_key, sensor_name):
+        url = f"{HOME_ASSISTANT_URL}{sensor_name}"
         bearer_token = home_assistant_api_key
         headers = {
             "Authorization": f"Bearer {bearer_token}",
@@ -145,7 +147,9 @@ class Weather(BasePlugin):
         current = weather_data.get("current")
         dt = datetime.fromtimestamp(current.get('dt'), tz=timezone.utc).astimezone(tz)
         current_icon = current.get("weather")[0].get("icon").replace("n", "d")
-        current_temperature_ha = self.get_ha_temperature(home_assistant_api_key) 
+        current_temperature_ha_bedroom = self.get_ha_temperature(home_assistant_api_key, BEDROOM_SENSOR) 
+        current_temperature_living_room = self.get_ha_temperature(home_assistant_api_key, LIVING_ROOM_SENSOR) 
+        current_temperature_office = self.get_ha_temperature(home_assistant_api_key, OFFICE_SENSOR) 
         data = {
             "current_date": dt.strftime("%A, %B %d"),
             "current_day_icon": self.get_plugin_dir(f'icons/{current_icon}.png'),
@@ -154,7 +158,9 @@ class Weather(BasePlugin):
             "temperature_unit": UNITS[units]["temperature"],
             "units": units,
             "time_format": time_format,
-            "room_temperature": current_temperature_ha
+            "room_temperature": current_temperature_ha_bedroom,
+            "living_room_temperature": current_temperature_living_room,
+            "office_temperature": current_temperature_office
         }
         data['forecast'] = self.parse_forecast(weather_data.get('daily'), tz)
         data['data_points'] = self.parse_data_points(weather_data, aqi_data, tz, units, time_format)
