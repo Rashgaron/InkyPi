@@ -23,7 +23,13 @@
           <div class="current-temp">{{ current_temperature }}<span class="temperature-unit">{{temperature_unit}}</span></div>
           <div class="feels-like">Feels Like {{ feels_like }}{% if units != "standard" %}°{% endif %}</div>
           <div class="room-temperature">
-            Room Temperature: {{ room_temperature }}{% if units != "standard" and room_temperature != "N/A" %}°{% endif %}
+            Bedroom: {{ room_temperature }}{% if units != "standard" and room_temperature != "N/A" %}°{% endif %}
+          </div>
+          <div class="room-temperature">
+            Livingroom: {{ living_room_temperature }}{% if units != "standard" and living_room_temperature != "N/A" %}°{% endif %}
+          </div>
+          <div class="room-temperature">
+            Office: {{ office_temperature }}{% if units != "standard" and office_temperature != "N/A" %}°{% endif %}
           </div>
           <div class="min-max">{{ forecast[0].high }}{% if units != "standard" %}°{% endif %} / {{ forecast[0].low }}{% if units != "standard" %}°{% endif %}</div>
         </div>
