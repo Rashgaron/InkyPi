@@ -27,7 +27,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-24T14:42:46.573234+02:00"
+                        "latest_refresh_time": "2025-10-30T16:32:30.676827+01:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -41,7 +41,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-24T15:41:05.244009+02:00"
+                        "latest_refresh_time": "2025-10-30T17:03:02.703806+01:00"
                     },
                     {
                         "plugin_id": "word_of_the_day",
@@ -61,7 +61,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-24T15:41:48.829290+02:00"
+                        "latest_refresh_time": "2025-10-30T18:44:05.249917+01:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -75,7 +75,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-24T16:09:51.489935+02:00"
+                        "latest_refresh_time": "2025-10-30T13:27:25.991235+01:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -89,7 +89,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-24T13:41:23.053727+02:00"
+                        "latest_refresh_time": "2025-10-30T13:58:12.590144+01:00"
                     },
                     {
                         "plugin_id": "weather",
@@ -120,10 +120,10 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-24T14:11:57.976019+02:00"
+                        "latest_refresh_time": "2025-10-30T16:01:41.221913+01:00"
                     }
                 ],
-                "current_plugin_index": 1
+                "current_plugin_index": 2
             },
             {
                 "name": "Weather",
@@ -159,7 +159,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-24T09:05:52.076061+02:00"
+                        "latest_refresh_time": "2025-10-29T09:10:32.538714+01:00"
                     }
                 ],
                 "current_plugin_index": 0
@@ -168,12 +168,12 @@
         "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": "2025-10-24T16:09:51.489935+02:00",
-        "image_hash": "b5a2195c1ff4def80de67dfef464e5caeffa5c30a4cc1760d11fe39f3a5f2951",
+        "refresh_time": "2025-10-30T18:44:05.249917+01:00",
+        "image_hash": "4a6876d166bb692dab895ff38e5f0505f0a73bd64573e40c09de56dd2c17c1ac",
         "refresh_type": "Playlist",
-        "plugin_id": "image_folder",
+        "plugin_id": "word_of_the_day",
         "playlist": "Default",
-        "plugin_instance": "random 3"
+        "plugin_instance": "JP Word of the day"
     },
     "log_system_stats": null,
     "timezone": "Europe/Paris",
