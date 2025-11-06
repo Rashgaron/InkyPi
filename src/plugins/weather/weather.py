@@ -31,8 +31,8 @@ AIR_QUALITY_URL = "http://api.openweathermap.org/data/2.5/air_pollution?lat={lat
 GEOCODING_URL = "http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={long}&limit=1&appid={api_key}"
 HOME_ASSISTANT_URL = "https://rashgaron-home.duckdns.org/api/states/sensor." 
 BEDROOM_SENSOR = "sensor_temp_temperatura"
-LIVING_ROOM_SENSOR = "sensor_temp_salon"
-OFFICE_SENSOR = "sensor_temp_bureau"
+LIVING_ROOM_SENSOR = "temp_sensor_salon_temperatura"
+OFFICE_SENSOR = "temp_sensor_bureau_temperatura"
 
 OPEN_METEO_FORECAST_URL = "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={long}&hourly=temperature_2m,precipitation,precipitation_probability,relative_humidity_2m,surface_pressure,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&current_weather=true&timezone=auto&models=best_match&forecast_days={forecast_days}"
 OPEN_METEO_AIR_QUALITY_URL = "https://air-quality-api.open-meteo.com/v1/air-quality?latitude={lat}&longitude={long}&hourly=european_aqi,uv_index,uv_index_clear_sky&timezone=auto"
