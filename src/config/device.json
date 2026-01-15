@@ -171,9 +171,9 @@
         "refresh_time": "2025-10-30T18:44:05.249917+01:00",
         "image_hash": "4a6876d166bb692dab895ff38e5f0505f0a73bd64573e40c09de56dd2c17c1ac",
         "refresh_type": "Playlist",
-        "plugin_id": "word_of_the_day",
+        "plugin_id": "image_folder",
         "playlist": "Default",
-        "plugin_instance": "JP Word of the day"
+        "plugin_instance": "Random Images"
     },
     "log_system_stats": null,
     "timezone": "Europe/Paris",
