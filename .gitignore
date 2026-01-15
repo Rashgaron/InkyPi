@@ -170,3 +170,7 @@ src/static/images/current_image.png
 
 # IDE files
 .idea
+
+# Static Files added by install/update_vendors.sh
+/src/static/scripts/
+/src/static/styles/
