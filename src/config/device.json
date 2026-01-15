@@ -25,7 +25,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-21T17:16:31.155010+02:00"
+                        "latest_refresh_time": "2026-01-15T11:58:20.037001+01:00"
                     },
                     {
                         "plugin_id": "image_folder",
@@ -112,7 +112,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": null
+                        "latest_refresh_time": "2026-01-15T11:57:24.913840+01:00"
                     }
                 ],
                 "current_plugin_index": 1
@@ -160,12 +160,12 @@
         "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": "2025-10-21T23:29:08.876368+02:00",
-        "image_hash": "f997b3989d1ef107de4a9397f330bb45bed54f3fd74845b7e63e6971de373555",
+        "refresh_time": "2026-01-15T11:58:20.037001+01:00",
+        "image_hash": "79f1f73aaeeea44a258655d12de8cd46b30cdcc5028f874c4b5a95d883eca40c",
         "refresh_type": "Playlist",
-        "plugin_id": "word_of_the_day",
+        "plugin_id": "image_folder",
         "playlist": "Default",
-        "plugin_instance": "JP Word of the day"
+        "plugin_instance": "Random Images"
     },
     "log_system_stats": null,
     "timezone": "Europe/Paris",

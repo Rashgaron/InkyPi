@@ -173,6 +173,7 @@ class Weather(BasePlugin):
         if icon_code not in icon_codes_to_preserve:
             if current_icon.endswith('n'):
                 current_icon = current_icon.replace("n", "d")
+
         current_temperature_ha_bedroom = self.get_ha_temperature(home_assistant_api_key, BEDROOM_SENSOR) 
         current_temperature_living_room = self.get_ha_temperature(home_assistant_api_key, LIVING_ROOM_SENSOR) 
         current_temperature_office = self.get_ha_temperature(home_assistant_api_key, OFFICE_SENSOR) 

@@ -51,11 +51,9 @@
         "active_playlist": null
     },
     "refresh_info": {
-        "refresh_time": "2025-10-30T18:18:03.274433+00:00",
-        "image_hash": "b14df3b3d6f68576f9f850c97b39a48dc5c2688f81090d6e129630c9421f1713",
-        "refresh_type": "Playlist",
-        "plugin_id": "weather",
-        "playlist": "Default",
-        "plugin_instance": "weather"
+        "refresh_time": "2026-01-15T10:53:23.204970+00:00",
+        "image_hash": "a80bc950812936935bf07cfcbb99e519ef1abdd9b41636d5312097595dc74d31",
+        "refresh_type": "Manual Update",
+        "plugin_id": "weather"
     }
 }
