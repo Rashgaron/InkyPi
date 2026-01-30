@@ -12,32 +12,36 @@
         "playlists": [
             {
                 "name": "Default",
-                "start_time": "09:00",
+                "start_time": "09:30",
                 "end_time": "24:00",
                 "plugins": [
                     {
                         "plugin_id": "image_folder",
                         "name": "Random Images",
                         "plugin_settings": {
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
-                            "padImage": "false"
+                            "padImage": "false",
+                            "backgroundOption": "blur",
+                            "backgroundColor": "#000000",
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/halloween"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2026-01-15T11:58:20.037001+01:00"
+                        "latest_refresh_time": "2025-10-30T16:32:30.676827+01:00"
                     },
                     {
                         "plugin_id": "image_folder",
                         "name": "random 2",
                         "plugin_settings": {
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
-                            "padImage": "true"
+                            "padImage": "false",
+                            "backgroundOption": "blur",
+                            "backgroundColor": "#000000",
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-21T17:47:01.597894+02:00"
+                        "latest_refresh_time": "2025-10-30T17:03:02.703806+01:00"
                     },
                     {
                         "plugin_id": "word_of_the_day",
@@ -57,31 +61,57 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-21T23:29:08.876368+02:00"
+                        "latest_refresh_time": "2025-10-30T18:44:05.249917+01:00"
+                    },
+                    {
+                        "plugin_id": "rss",
+                        "name": "La Depeche RSS",
+                        "plugin_settings": {
+                            "title": "La Depeche",
+                            "includeImages": "true",
+                            "fontSize": "normal",
+                            "feedUrl": "https://www.ladepeche.fr/communes/toulouse,31555/rss.xml",
+                            "selectedFrame": "None",
+                            "topMargin": "",
+                            "bottomMargin": "",
+                            "leftMargin": "",
+                            "rightMargin": "",
+                            "backgroundOption": "color",
+                            "backgroundColor": "#ffffff",
+                            "textColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": "2026-01-30T10:29:22.477851+01:00"
                     },
                     {
                         "plugin_id": "image_folder",
                         "name": "random 3",
                         "plugin_settings": {
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
-                            "padImage": "true"
+                            "padImage": "false",
+                            "backgroundOption": "blur",
+                            "backgroundColor": "#000000",
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/halloween"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": null
+                        "latest_refresh_time": "2026-01-30T10:59:28.879034+01:00"
                     },
                     {
                         "plugin_id": "image_folder",
                         "name": "random 4",
                         "plugin_settings": {
-                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved",
-                            "padImage": "true"
+                            "padImage": "false",
+                            "backgroundOption": "blur",
+                            "backgroundColor": "#000000",
+                            "folder_path": "/home/admin/Documents/InkyPi/src/static/images/saved"
                         },
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": null
+                        "latest_refresh_time": "2025-10-30T13:58:12.590144+01:00"
                     },
                     {
                         "plugin_id": "weather",
@@ -112,10 +142,49 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2026-01-15T11:57:24.913840+01:00"
+                        "latest_refresh_time": "2026-01-30T09:49:11.899914+01:00"
+                    },
+                    {
+                        "plugin_id": "rss",
+                        "name": "Le monde RSS",
+                        "plugin_settings": {
+                            "title": "Le Monde",
+                            "includeImages": "true",
+                            "fontSize": "normal",
+                            "feedUrl": "https://www.lemonde.fr/rss/une.xml",
+                            "selectedFrame": "None",
+                            "topMargin": "",
+                            "bottomMargin": "",
+                            "leftMargin": "",
+                            "rightMargin": "",
+                            "backgroundOption": "color",
+                            "backgroundColor": "#ffffff",
+                            "textColor": "#000000"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": null
+                    },
+                    {
+                        "plugin_id": "image_album",
+                        "name": "Immich",
+                        "plugin_settings": {
+                            "albumProvider": "Immich",
+                            "url": "https://rashgaron-immich.duckdns.org",
+                            "album": "Cuadro_Conectado",
+                            "padImage": "true",
+                            "randomize": "true",
+                            "backgroundOption": "blur",
+                            "backgroundColor": "#ffffff"
+                        },
+                        "refresh": {
+                            "interval": 1800
+                        },
+                        "latest_refresh_time": null
                     }
                 ],
-                "current_plugin_index": 1
+                "current_plugin_index": 4
             },
             {
                 "name": "Weather",
@@ -151,7 +220,7 @@
                         "refresh": {
                             "interval": 1800
                         },
-                        "latest_refresh_time": "2025-10-21T08:45:44.907399+02:00"
+                        "latest_refresh_time": "2025-10-29T09:10:32.538714+01:00"
                     }
                 ],
                 "current_plugin_index": 0
@@ -160,12 +229,10 @@
         "active_playlist": "Default"
     },
     "refresh_info": {
-        "refresh_time": "2026-01-15T11:58:20.037001+01:00",
-        "image_hash": "79f1f73aaeeea44a258655d12de8cd46b30cdcc5028f874c4b5a95d883eca40c",
-        "refresh_type": "Playlist",
-        "plugin_id": "image_folder",
-        "playlist": "Default",
-        "plugin_instance": "Random Images"
+        "refresh_time": "2026-01-30T11:31:54.850807+01:00",
+        "image_hash": "d6b380b05da7b328feac8cd9170b21cae558061dfb7105781fd5a54cb268664a",
+        "refresh_type": "Manual Update",
+        "plugin_id": "image_album"
     },
     "log_system_stats": null,
     "timezone": "Europe/Paris",
@@ -174,7 +241,7 @@
     "image_settings": {
         "saturation": 1.0,
         "brightness": 1.0,
-        "sharpness": 2.0,
+        "sharpness": 1.0,
         "contrast": 1.0
     }
 }
