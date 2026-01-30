@@ -174,3 +174,4 @@ src/static/images/current_image.png
 # Static Files added by install/update_vendors.sh
 /src/static/scripts/
 /src/static/styles/
+src/static/images/current_image.png
